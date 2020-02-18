@@ -1,56 +1,82 @@
-/*----- Tabs -----*/
-.tabs {
-	width:100%;
-	display:inline-block;
-}
 
-/*----- Tab Links -----*/
-/* Clearfix */
-	.tab-links:after {
-	display:block;
-	clear:both;
-	content:'';
-}
-
-.tab-links li {
-	margin:0px 5px;
-	float:left;
-	list-style:none;
-}
-
-.tab-links a {
-	padding:9px 15px;
-	display:inline-block;
-	border-radius:3px 3px 0px 0px;
-	background:#7FB5DA;
-	font-size:16px;
-	font-weight:600;
-	color:#4c4c4c;
-	transition:all linear 0.15s;
-}
-
-.tab-links a:hover {
-	background:#a7cce5;
-	text-decoration:none;
-}
-
-li.active a, li.active a:hover {
-	background:#fff;
-	color:#4c4c4c;
-}
-
-/*----- Content of Tabs -----*/
-.tab-content {
-	padding:15px;
-	border-radius:3px;
-	box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-	background:#fff;
-}
-
-.tab {
-	display:none;
-}
-
-.tab.active {
-	display:block;
-}
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url(https://subtlepatterns.com/patterns/use_your_illusion.png);
+    color: #eee;
+    font: 1em 'PT Sans', sans-serif;
+  }
+  
+  ::selection {
+    background-color: #4EC6DE;
+  }
+  
+  .tabbed {
+    width: 700px;
+    margin: 50px auto;
+  }
+  
+  .tabbed > input {
+    display: none;
+  }
+  
+  .tabbed > label {
+    display: block;
+    float: left;
+    padding: 12px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+  }
+  
+  .tabbed > label:hover,
+  .tabbed > input:checked + label {
+    background: #4EC6DE;
+  }
+  
+  .tabs {
+    clear: both;
+    perspective: 600px;
+  }
+  
+  .tabs > div {
+    width: 700px;
+    position: absolute;
+    border: 2px solid #4EC6DE;
+    padding: 10px 30px 40px;
+    line-height: 1.4em;
+    opacity: 0;
+    transform: rotateX(-20deg);
+    transform-origin: top center;
+    transition: opacity .3s, transform 1s;
+    z-index: 0;
+  }
+  
+  #tab-nav-1:checked ~ .tabs > div:nth-of-type(1),
+  #tab-nav-2:checked ~ .tabs > div:nth-of-type(2),
+  #tab-nav-3:checked ~ .tabs > div:nth-of-type(3),
+  #tab-nav-4:checked ~ .tabs > div:nth-of-type(4){
+    transform: rotateX(0);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .tabbed { width: 400px }
+    .tabbed > label { display: none }
+    .tabs > div {
+      width: 400px;
+      border: none;
+      padding: 0;
+      opacity: 1;
+      position: relative;
+      transform: none;
+      margin-bottom: 60px;
+    }
+    .tabs > div h2 {
+      border-bottom: 2px solid #4EC6DE;
+      padding-bottom: .5em;
+    }
+  }
