@@ -61,7 +61,7 @@ a:hover {
 }
 .pcss3t > label {
 	position: relative;
-	display: inline-block;
+	display: inline;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -74,7 +74,7 @@ a:hover {
 	-webkit-transition: all 0.1s;
 }
 .pcss3t > label i {
-	display: block;
+	display: inline;
 	float: left;
 	margin: 16px 8px 0 -2px;
 	padding: 0;
@@ -90,7 +90,7 @@ a:hover {
 .pcss3t > ul {
 	list-style: none;
 	position: relative;
-	display: block;
+	display: inline;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
@@ -143,7 +143,7 @@ a:hover {
 }
 .pcss3t-height-auto > ul > li {
 	position: static;
-	display: none;
+	display: inline;
 	height: auto !important;
 }
 .pcss3t-height-auto > .tab-content-first:checked ~ ul .tab-content-first,
@@ -171,7 +171,7 @@ a:hover {
 	margin-top: 0;
 }
 .pcss3t .grid-col {
-	display: block;
+	display: inline;
 	float: left;
 	margin-left: 2%;
 }
