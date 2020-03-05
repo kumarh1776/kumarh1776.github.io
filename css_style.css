@@ -61,7 +61,7 @@
   }
   
   li.slider {
-    width: 25%;
+    width: 20%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -85,7 +85,7 @@
   .menu li:nth-child(2):focus,
   .menu li:nth-child(2):active {
     & ~ .slider {
-      left: 25%;
+      left: 20%;
       background-color: #9b59b6;
     }
   }
@@ -94,7 +94,7 @@
   .menu li:nth-child(3):focus,
   .menu li:nth-child(3):active {
     & ~ .slider {
-      left: 50%;
+      left: 40%;
       background-color: #e67e22;
     }
   }
@@ -103,7 +103,16 @@
   .menu li:nth-child(4):focus,
   .menu li:nth-child(4):active {
     & ~ .slider {
-      left: 75%;
+      left: 60%;
       background-color: #16a085;
+    }
+
+    .menu li:nth-child(5):hover,
+    .menu li:nth-child(5):focus,
+    .menu li:nth-child(5):active {
+      & ~ .slider {
+        left: 80%;
+        background-color: #e67e22;
+      }
     }
   }
