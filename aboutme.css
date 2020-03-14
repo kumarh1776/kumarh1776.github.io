@@ -70,7 +70,7 @@
     z-index: 8;
     transition: left .4s, background-color .4s;
   }
-  
+/*
   .menu li:nth-child(1):hover,
   .menu li:nth-child(1):focus,
   .menu li:nth-child(1):active {
@@ -106,13 +106,15 @@
       left: 60%;
       background-color: #16a085;
     }
+}
 
     .menu li:nth-child(5):hover,
     .menu li:nth-child(5):focus,
     .menu li:nth-child(5):active {
-      & ~ .slider {
+     & ~ .slider {
         left: 80%;
         background-color: #e67e22;
       }
+      
     }
-  }
+    */
