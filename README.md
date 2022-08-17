@@ -1,2 +1,2 @@
 # kumarh1776.github.io
-personal website
+Check out my website!
